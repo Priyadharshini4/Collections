@@ -1,0 +1,50 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+class Laptop implements Comparable < Laptop >
+{
+  String brand;
+  int price;
+  int ramGb;
+
+  public Laptop (String brand, int price, int ramGb)
+  {
+    this.brand = brand;
+    this.price = price;
+    this.ramGb = ramGb;
+  }
+
+   @Override 
+   public int compareTo (Laptop l)  //comparable doesnt need separate class and requires single parameter
+  {			
+    return this.brand.compareTo (l.brand);      //for int type->this.brand-l.brand
+  }
+}
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    ArrayList < Laptop > ar = new ArrayList < Laptop > ();
+    Laptop l1 = new Laptop ("Del", 12000, 16);
+    Laptop l2 = new Laptop ("Hp", 15000, 4);
+    Laptop l3 = new Laptop ("Apple", 14000, 8);
+      ar.add (l1);
+      ar.add (l2);
+      ar.add (l3);
+      Collections.sort (ar);
+    for (Laptop temp:ar)
+      {
+	System.out.println ("Brand:" + temp.brand);
+	System.out.println ("Price:" + temp.price);
+	System.out.println ("RamGb:" + temp.ramGb);
+      }
+
+  }
+}
